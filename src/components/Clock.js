@@ -21,10 +21,13 @@ class Time extends Component {
   render(){
     return(
       <div className="Time">
-        <div className="toggleButton">
-          <Switch onClick={this.toggleSwitch}/>
+        <div className="navbar">
+          Date 
+          <Switch onClick={this.toggleSwitch} className="toggle"/>
         </div>
-        <Clock format={'h:mm:ssa'} ticking={true} timezone={'US/Central'} />
+        <div className="time">
+          <Clock format={'h:mm:ssa'} ticking={true} timezone={'US/Central'} />
+        </div>
         <div className="toggleDate">
           {this.state.todaysDate ? moment().format('MMMM Do YYYY') : ''}
         </div>
